@@ -20,7 +20,7 @@ public class JwtTokenUtil {
     @Value("${jwt.secret}")
     private String secret;
 
-    @Value("${jwt.expiration}")
+    @Value("${jwt.expiration.ms}")
     private long jwtExpirationInMs;
 
     // Estrae il nome utente dal token JWT

@@ -3,7 +3,7 @@ package it.epicode.fs1024_eventi.auth;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import it.epicode.fs1024_eventi.entity.Booking;
 import it.epicode.fs1024_eventi.entity.Event;
-import it.epicode.fs1024_eventi.enums.Role;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

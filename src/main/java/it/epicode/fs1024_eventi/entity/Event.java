@@ -1,5 +1,6 @@
 package it.epicode.fs1024_eventi.entity;
 
+import io.swagger.v3.oas.annotations.info.Info;
 import it.epicode.fs1024_eventi.auth.AppUser;
 import jakarta.persistence.*;
 import jakarta.persistence.CascadeType;
@@ -32,5 +33,6 @@ public class Event {
 
     @OneToMany(mappedBy = "event", cascade = CascadeType.ALL)
     private List <Booking> bookings;
+
 
 }
