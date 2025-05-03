@@ -31,6 +31,9 @@ public class AppUser implements UserDetails {
     @Column(nullable = false, unique = true)
     private String username;
 
+    @Column(nullable = false, unique = true)
+    private String email;
+
     @Column(nullable = false)
     @ToString.Exclude
     @JsonIgnore
@@ -61,12 +64,13 @@ public class AppUser implements UserDetails {
                 .collect(Collectors.toList());
     }
 
-    public AppUser(String username, String password, Collection<? extends GrantedAuthority> authorities) {
-        this(username, password, true, true, true, true, authorities);
+    public AppUser(String username,String email, String password, Collection<? extends GrantedAuthority> authorities) {
+        this(username,email, password, true, true, true, true, authorities);
     }
 
-    public AppUser(String username, String password, boolean enabled, boolean accountNonExpired, boolean credentialsNonExpired, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities) {
+    public AppUser(String username,String email, String password, boolean enabled, boolean accountNonExpired, boolean credentialsNonExpired, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities) {
         this.username = username;
+        this.email = email;
         this.password = password;
         this.enabled = enabled;
         this.accountNonExpired = accountNonExpired;
